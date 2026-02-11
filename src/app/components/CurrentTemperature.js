@@ -2,8 +2,8 @@ import { fetchWeatherApi } from "openmeteo";
 
 const CurrentTemperature = async ({ latitude, longitude }) => {
     const params = {
-        latitude: latitude || 26.8393,
-        longitude: longitude || 80.9231,
+        latitude: latitude || 26.860556,
+        longitude: longitude || 80.915833,
         current: "temperature_2m",
     };
     const url = "https://api.open-meteo.com/v1/forecast";
