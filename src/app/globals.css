@@ -1,5 +1,53 @@
 @import "tailwindcss";
 
+@utility line-y {
+  position: relative;
+  &::before {
+    content: "";
+    width: 200vw;
+    height: 1px;
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    @apply bg-gray-950/5;
+  }
+  &::after {
+    content: "";
+    width: 200vw;
+    height: 1px;
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    @apply bg-gray-950/5;
+  }
+}
+
+@utility line-t {
+  position: relative;
+  &::before {
+    content: "";
+    width: 200vw;
+    height: 1px;
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    @apply bg-gray-950/5;
+  }
+}
+
+@utility line-b {
+  position: relative;
+  &::before {
+    content: "";
+    width: 200vw;
+    height: 1px;
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    @apply bg-gray-950/5;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

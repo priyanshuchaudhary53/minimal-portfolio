@@ -1,6 +1,6 @@
-import CurrentTemperature from "./CurrentTemperature";
-import DayNight from "./DayNight";
-import IndiaTime from "./IndiaTime";
+import CurrentTemperature from "../ui/CurrentTemperature";
+import DayNight from "../ui/DayNight";
+import IndiaTime from "../ui/IndiaTime";
 
 export default function Header() {
   return (
