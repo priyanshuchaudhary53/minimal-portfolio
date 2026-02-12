@@ -74,6 +74,10 @@
   }
 }
 
+@utility text-accent {
+  @apply text-cyan-500;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
