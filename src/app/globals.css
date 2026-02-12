@@ -37,13 +37,39 @@
 
 @utility line-b {
   position: relative;
-  &::before {
+  &::after {
     content: "";
     width: 200vw;
     height: 1px;
     position: absolute;
     left: -100vw;
     bottom: 0;
+    @apply bg-gray-950/5;
+  }
+}
+
+@utility line-r {
+  position: relative;
+  &::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @apply bg-gray-950/5;
+  }
+}
+
+@utility line-l {
+  position: relative;
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     @apply bg-gray-950/5;
   }
 }

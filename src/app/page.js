@@ -30,7 +30,7 @@ export default function Home() {
         <div className="mt-4 px-2 max-sm:px-4 relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 after:-left-[100vw]">
           <p className="text-gray-600 text-base">A small selection of my work</p>
         </div>
-        <PortfolioGrid className="mt-6 sm:mt-10" />
+        <PortfolioGrid className="mt-10" />
       </div>
     </div>
   );
