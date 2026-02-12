@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <div>
         <div className="px-2 max-sm:px-4 line-y">
-          <h2 className="text-accent font-mono text-sm font-semibold tracking-widest uppercase sm:text-xs">Side project</h2>
+          <h2 className="text-accent font-mono text-sm font-semibold tracking-widest uppercase sm:text-xs">Side projects</h2>
         </div>
         <ProjectList className="mt-6 sm:mt-10" />
       </div>
