@@ -1,5 +1,6 @@
-import PortfolioGrid from "@/components/portfolio/PortfolioGrid";
+import PortfolioGrid from "@/components/portfolio/portfolioGrid";
 import ProjectList from "@/components/project/projectList";
+import TestimonialList from "@/components/testimonial/testimonialList";
 import Image from "next/image";
 
 export default function Home() {
@@ -26,6 +27,10 @@ export default function Home() {
           <p className="text-gray-600 text-base">A small selection of my work</p>
         </div>
         <PortfolioGrid className="mt-6 sm:mt-10" />
+      </div>
+      <div>
+        <h2 className="sr-only">Testimonial</h2>
+        <TestimonialList />
       </div>
       <div>
         <div className="px-2 max-sm:px-4 line-y">
