@@ -78,6 +78,10 @@
   @apply text-cyan-500;
 }
 
+@utility corner-squircle {
+    corner-shape: squircle;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
