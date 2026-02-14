@@ -20,6 +20,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+}
+
 export const metadata = {
   title: "Priyanshu Chaudhary - WordPress Developer",
   description: "Portfolio of Priyanshu Chaudhary, a WordPress developer specializing in custom themes and plugins. Based in Lucknow, India, showcasing work and side projects.",
