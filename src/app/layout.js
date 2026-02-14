@@ -24,6 +24,10 @@ export const viewport = {
   width: 'device-width',
   initialScale: 1,
   minimumScale: 1,
+  height: 'device-height',
+  maximumScale: 1,
+  userScalable: 'no',
+  targetDensitydpi: 'device-dpi',
 }
 
 export const metadata = {
