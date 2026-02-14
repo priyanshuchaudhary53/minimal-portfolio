@@ -44,7 +44,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="pb-8 w-full fixed left-1/2 -translate-x-1/2 bottom-0 flex justify-center z-50 max-w-screen">
+    <div className="pb-8 w-full fixed left-1/2 -translate-x-1/2 bottom-[env(safe-area-inset-bottom,0)] flex justify-center z-50 max-w-screen">
       {isVisible && (
         <div className="absolute inset-0 overflow-hidden">
           <div
