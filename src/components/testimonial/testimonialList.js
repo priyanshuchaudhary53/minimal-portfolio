@@ -11,7 +11,7 @@ export default function TestimonialList({className}) {
                     <Image src="/client/volkan.webp" alt="Volkan Kaya" width={48} height={48} className="aspect-square size-12 rounded-full outline -outline-offset-1 outline-gray-950/5" />
                     <div className="text-sm/6">
                         <p className="font-medium">Volkan Kaya</p>
-                        <p className="text-gray-600">Founder of <a className="font-semibold text-gray-950 underline decoration-cyan-400 underline-offset-4 hover:text-accent" href="https://versoly.com/" target="_blank" rel="noopener noreferrer">Versoly</a></p>
+                        <p className="text-gray-600">Founder of <a className="font-semibold text-gray-950 underline decoration-cyan-400 underline-offset-4 hover:text-cyan-500" href="https://versoly.com/" target="_blank" rel="noopener noreferrer">Versoly</a></p>
                     </div>
                 </figcaption>
             </figure>
