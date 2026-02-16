@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="py-18 grid gap-18 2xl:gap-24 2xl:py-24">
+    <main className="py-18 grid gap-18 2xl:gap-24 2xl:py-24">
       <div id="intro" className="scroll-mt-4">
         <div className="px-2 max-sm:px-4 line-y">
           <Image src="/profile.webp" alt="Priyanshu Chaudhary" width={72} height={72} className="rounded-2xl" />
@@ -41,6 +41,6 @@ export default function Home() {
         </div>
         <ProjectList className="mt-6 2xl:mt-10" />
       </div>
-    </div>
+    </main>
   );
 }
