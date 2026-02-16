@@ -9,7 +9,7 @@ const portfolioData = [
     },
     {
         id: 2,
-        title: 'Nawypoczynek',
+        title: 'NaWypoczynek',
         description: 'Advertisement platform for rentals',
         image: '/portfolio/nw-home.webp',
         url: 'https://nawypoczynek.pl/',
@@ -22,7 +22,39 @@ const portfolioData = [
         image: '/portfolio/et-home.webp',
         url: 'https://eternitech.com/',
         tags: ['Elementor', 'Hello Elementor theme'],
-    }
+    },
+    {
+        id: 4,
+        title: 'Moraz',
+        description: 'E-commerce website for skincare products',
+        image: '/portfolio/moraz-home.webp',
+        url: 'https://moraz-usa.com/',
+        tags: ['WooCommerce', 'Elementor'],
+    },
+    {
+        id: 5,
+        title: 'PlayWithStakes',
+        description: 'Affiliate website for online casinos',
+        image: '/portfolio/pws-home.webp',
+        url: 'https://playwithstakes.com/',
+        tags: ['GenerateBlocks Pro', 'Spinoko theme'],
+    },
+    {
+        id: 6,
+        title: 'WeAnim8',
+        description: 'Marketing website for animation studio',
+        image: '/portfolio/weanim8-home.webp',
+        url: 'https://weanim8.com/',
+        tags: ['Elementor', 'Hello Elementor theme'],
+    },
+    {
+        id: 7,
+        title: 'Moraz FR',
+        description: 'Landing page for Moraz France',
+        image: '/portfolio/moraz-fr-home.webp',
+        url: 'https://moraz.fr/',
+        tags: ['Elementor', 'Hello Elementor theme'],
+    },
 ];
 
 export default portfolioData;
