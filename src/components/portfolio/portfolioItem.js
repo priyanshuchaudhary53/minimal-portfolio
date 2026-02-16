@@ -19,7 +19,7 @@ export default function PortfolioItem({ portfolio }) {
                 <p className="line-clamp-1 text-sm/6 text-neutral-600">{portfolio.description}</p>
                 <div className="mt-2.5 flex flex-wrap items-center gap-2 font-mono text-xs">
                     {portfolio.tags.map((tag, index) => (
-                        <span key={index} className="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">{tag}</span>
+                        <span key={index} className="inline-block rounded-[8px] bg-gray-50 border border-gray-950/5 px-2.5 py-1 text-gray-600">{tag}</span>
                     ))}
                 </div>
             </div>
