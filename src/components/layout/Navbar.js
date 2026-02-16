@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <div className="pb-8 w-full fixed left-0 right-0 bottom-[env(safe-area-inset-bottom,0)] flex justify-center z-50 max-w-screen translate-z-0 will-change-transform">
       {isVisible && (
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="hidden absolute inset-0 overflow-hidden xl:block">
           <div className="opacity-100 absolute inset-0 z-1 mask-[linear-gradient(rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_25%,rgba(0,0,0,0)_37.5%)] pointer-events-none backdrop-blur-[0.25px] will-change-auto"></div>
           <div className="opacity-100 absolute inset-0 z-2 mask-[linear-gradient(rgba(0,0,0,0)_12.5%,rgb(0,0,0)_25%,rgb(0,0,0)_37.5%,rgba(0,0,0,0)_50%)] pointer-events-none backdrop-blur-[0.5px] will-change-auto"></div>
           <div className="opacity-100 absolute inset-0 z-3 mask-[linear-gradient(rgba(0,0,0,0)_25%,rgb(0,0,0)_37.5%,rgb(0,0,0)_50%,rgba(0,0,0,0)_62.5%)] pointer-events-none backdrop-blur-[1px] will-change-auto"></div>
