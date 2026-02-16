@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PortfolioItem({ portfolio }) {
     return (
         <li className="relative group transition-colors sm:even:line-l sm:odd:line-r hover:bg-gray-950/5">
-            <a href={portfolio.url} className="absolute inset-0 z-20" target="_blank" rel="noopener noreferrer"></a>
+            <a href={portfolio.url} aria-label={`Visit ${portfolio.title}`} className="absolute inset-0 z-20" target="_blank" rel="noopener noreferrer"></a>
             <div className="p-2 max-sm:line-y sm:group-nth-[2n+1]:line-y">
                 <div className="block relative">
                     <div className="absolute top-1/2 left-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 transform flex-row items-center gap-1 rounded-full border border-gray-950 bg-gray-950/90 py-0.5 pr-2 pb-1 pl-3 text-center font-mono text-xs/5 font-medium text-white opacity-0 inset-ring inset-ring-white/10 transition-opacity group-hover:flex group-hover:opacity-100">
