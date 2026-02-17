@@ -25,7 +25,7 @@ export default function ClientList({ className }) {
                   alt={`${client.name} Logo`}
                   width={28}
                   height={28}
-                  className="inline-block shrink-0 object-contain group-hover:scale-110 transition-transform duration-200"
+                  className="inline-block shrink-0 object-contain group-hover:scale-105 transition-transform duration-200"
                 />
               </HoverCardTrigger>
               <HoverCardContent

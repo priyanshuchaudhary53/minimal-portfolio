@@ -28,6 +28,12 @@ const clientData = [
     name: "2Scale",
     url: "https://2scale.ai/",
     logoUrl: "/client/2scale-logo.png",
+  },
+  {
+    id: 6,
+    name: "CTO Clinic",
+    url: "https://cto.clinic/",
+    logoUrl: "/client/cto-logo.png",
   }
 ];
 
