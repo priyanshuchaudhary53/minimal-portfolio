@@ -1,3 +1,4 @@
+import ClientList from "@/components/client/clientList";
 import PortfolioGrid from "@/components/portfolio/portfolioGrid";
 import ProjectList from "@/components/project/projectList";
 import TestimonialList from "@/components/testimonial/testimonialList";
@@ -17,10 +18,31 @@ export default function Home() {
           </div>
           <p className="text-gray-600 text-base/7">WordPress Developer</p>
         </div>
-        <div className="mt-6 px-2 max-sm:px-4 line-y">
+        <div className="mt-6 px-2 max-sm:px-4 line-y 2xl:mt-10">
           <p className="text-gray-600 text-base">Hey, I'm Priyanshu, a WordPress developer based in <span className="inline-flex items-center gap-1.5">Lucknow, India <Image src="/india.svg" alt="India Flag" width={24} height={20} className="inline-block shrink-0 rounded object-cover h-4.5" /></span> . I specialize in creating custom themes and plugins.</p>
           <p className="mt-2 text-gray-600 text-base">I love creating websites that are perfect blend of functionality and aesthetics.</p>
         </div>
+        {/* <div className="mt-6 px-2 max-sm:px-4 line-y">
+          <div className="group font-mono flex items-center gap-2 text-sm">
+            <div className="shrink-0 flex size-7 bg-gray-50 text-gray-600 justify-center items-center rounded-[8px] ring-1 ring-inset ring-gray-950/5">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+            </div>
+              <p>
+                <a href="mailto:contact@priyanshuc.dev" aria-label="Send email to contact@priyanshuc.dev" className="inline-block text-gray-600 text-sm/7 underline-offset-4 hover:underline">contact@priyanshuc.dev</a>
+              </p>
+          </div>
+        </div> */}
+      </div>
+      <div>
+        <div className="px-2 max-sm:px-4 line-y">
+          <h2 className="text-cyan-500 font-mono text-sm font-semibold tracking-widest uppercase sm:text-xs">Clients</h2>
+        </div>
+        <div className="mt-4 px-2 max-sm:px-4 line-y">
+          <p className="text-gray-600 text-base/7">Trusted by Businesses & Agencies</p>
+        </div>
+        <ClientList className="mt-6 2xl:mt-10" />
       </div>
       <div id="work" className="scroll-mt-4">
         <div className="px-2 max-sm:px-4 line-y">

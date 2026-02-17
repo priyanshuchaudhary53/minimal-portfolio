@@ -73,7 +73,7 @@ export default function Navbar() {
               <HoverCardContent
                 side="top"
                 sideOffset={12}
-                className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-gray-50 shadow-none w-auto text-sm px-2 py-1"
+                className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
               >
                 {item.title}
               </HoverCardContent>
