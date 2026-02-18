@@ -1,4 +1,4 @@
-import VerifiedIcon from "./VerifiedIcon";
+import VerifiedIcon from "./icon/VerifiedIcon";
 
 export default function ProfileTitle({title, subtitle, className}) {
   return (

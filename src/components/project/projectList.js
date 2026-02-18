@@ -1,5 +1,6 @@
 import Image from "next/image";
 import projectData from "@/data/projectData";
+import ArrowUpRightIcon from "../icon/ArrowUpRightIcon";
 
 export default function ProjectList({className}) {
     return (
@@ -16,9 +17,7 @@ export default function ProjectList({className}) {
                                 </div>
                             </div>
                             <div className="shrink-0 text-gray-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                </svg>
+                                <ArrowUpRightIcon className="size-6" aria-hidden="true" />
                             </div>
                         </a>
                     </li>
