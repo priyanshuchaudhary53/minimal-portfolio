@@ -1,4 +1,4 @@
-export default function ClockIcon({ ...props }) {
+export default function ClockIcon({ stroke="1.5", ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

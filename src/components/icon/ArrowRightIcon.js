@@ -1,4 +1,4 @@
-export default function ChevronDownIcon({ stroke="1.5", ...props }) {
+export default function ArrowRightIcon({ stroke="1.5", ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@ export default function ChevronDownIcon({ stroke="1.5", ...props }) {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
       />
     </svg>
   );

@@ -34,7 +34,7 @@ export default function PortfolioGrid({ className, inititalLimit }) {
             className="inline-flex items-center gap-2 cursor-pointer rounded-lg bg-black pl-4 pr-3 py-2 text-sm/6 font-medium text-white hover:bg-gray-800 outline-none select-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
           >
             {showAll ? "Show less"  : "Show more"}
-            <ChevronDownIcon className={`size-5 ${showAll ? "rotate-180" : ""}`} aria-hidden="true" />
+            <ChevronDownIcon stroke="2" className={`size-4 ${showAll ? "rotate-180" : ""}`} aria-hidden="true" />
           </button>
         </div>
       )}
