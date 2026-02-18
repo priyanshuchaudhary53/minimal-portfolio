@@ -2,7 +2,7 @@ const navbarData = [
   {
     id: 1,
     title: "Intro",
-    url: "#intro",
+    url: "/#intro",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const navbarData = [
   {
     id: 2,
     title: "Work",
-    url: "#work",
+    url: "/#work",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const navbarData = [
   {
     id: 3,
     title: "Testimonial",
-    url: "#testimonial",
+    url: "/#testimonial",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const navbarData = [
   {
     id: 4,
     title: "Side projects",
-    url: "#side-projects",
+    url: "/#side-projects",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
