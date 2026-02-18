@@ -10,7 +10,7 @@ import TestimonialList from "@/components/testimonial/testimonialList";
 export default function Home() {
   return (
     <main className="py-18 grid gap-18 2xl:gap-24 2xl:py-24">
-      <div id="intro" className="scroll-mt-4">
+      <section id="intro" className="scroll-mt-4">
         <ProfileImage src="/profile.webp" alt="Priyanshu Chaudhary" />
         <ProfileTitle className="mt-4" title="Priyanshu Chaudhary" subtitle="WordPress Developer" />
         <ProfileAbout className="mt-6 2xl:mt-10" />
@@ -26,7 +26,7 @@ export default function Home() {
               </p>
           </div>
         </div> */}
-      </div>
+      </section>
 
       <SectionWrapper title="CLients" description="Trusted by businesses & gencies">
           <ClientList className="mt-6 2xl:mt-10" />

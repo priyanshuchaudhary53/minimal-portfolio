@@ -25,7 +25,7 @@ const navbarData = [
   {
     id: 2,
     title: "Work",
-    url: "/#work",
+    url: "/work",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
