@@ -6,6 +6,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import navbarData from "@/data/navbarData";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -61,24 +62,24 @@ export default function Navbar() {
         className={`z-10 p-1 flex gap-1 bg-white rounded-[12px] ring-1 ring-gray-950/5 transition-all duration-200 ${isVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-3 pointer-events-none"}`}
       >
         {navbarData.map((item) => (
-          <div key={item.id}>
-            <HoverCard openDelay={10} closeDelay={10}>
-              <HoverCardTrigger
-                href={item.url}
-                className="inline-flex h-9 w-9 text-gray-600 items-center justify-center rounded-md transition-colors hover:bg-gray-950/5 "
-              >
+          <HoverCard key={item.id} openDelay={10} closeDelay={10}>
+            <HoverCardTrigger
+              className="inline-flex h-9 w-9 text-gray-600 items-center justify-center rounded-md transition-colors hover:bg-gray-950/5"
+              asChild
+            >
+              <Link href={item.url}>
                 <span className="sr-only">{item.title}</span>
                 {item.svg}
-              </HoverCardTrigger>
-              <HoverCardContent
-                side="top"
-                sideOffset={12}
-                className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
-              >
-                {item.title}
-              </HoverCardContent>
-            </HoverCard>
-          </div>
+              </Link>
+            </HoverCardTrigger>
+            <HoverCardContent
+              side="top"
+              sideOffset={12}
+              className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
+            >
+              {item.title}
+            </HoverCardContent>
+          </HoverCard>
         ))}
       </nav>
     </div>
