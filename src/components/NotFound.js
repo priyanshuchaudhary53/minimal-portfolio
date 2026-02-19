@@ -1,6 +1,6 @@
-import Link from "next/link";
 import ArrowRightIcon from "./icon/ArrowRightIcon";
 import FaceFrownIcon from "./icon/FaceFrownIcon";
+import NavigationButton from "./ui/NavigationButton";
 
 export function NotFound({ className }) {
   return (
@@ -14,13 +14,10 @@ export function NotFound({ className }) {
         </h1>
       </div>
       <div className="mt-4 px-2 flex justify-center max-sm:px-4">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 cursor-pointer rounded-lg bg-black pl-4 pr-3 py-2 text-sm/6 font-medium text-white hover:bg-gray-800 outline-none select-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
-        >
+        <NavigationButton href="/" withIcon={true}>
           Go to Home
           <ArrowRightIcon className="size-4" stroke="2" aria-hidden="true" />
-        </Link>
+        </NavigationButton>
       </div>
     </div>
   );

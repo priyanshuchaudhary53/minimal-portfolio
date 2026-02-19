@@ -33,7 +33,7 @@ export default function Home() {
       </SectionWrapper>
 
       <SectionWrapper id="work" title="Work" description="A small selection of my work">
-        <PortfolioGrid className="mt-6 2xl:mt-10" />
+        <PortfolioGrid className="mt-6 2xl:mt-10" limit={4} />
       </SectionWrapper>
 
       <SectionWrapper id="testimonial" title="Testimonial" showTitle={false}>
