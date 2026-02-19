@@ -28,7 +28,7 @@ export default function Home() {
         </div> */}
       </section>
 
-      <SectionWrapper title="CLients" description="Trusted by businesses & gencies">
+      <SectionWrapper title="CLients" description="Trusted by businesses & agencies">
           <ClientList className="mt-6 2xl:mt-10" />
       </SectionWrapper>
 
