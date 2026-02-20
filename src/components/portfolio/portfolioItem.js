@@ -16,7 +16,7 @@ export default function PortfolioItem({ portfolio }) {
           <a
             href={portfolio.url}
             aria-label={`Visit ${portfolio.title}`}
-            className="absolute bottom-2 right-2 z-20 w-7 h-7 rounded-md sm:w-auto sm:h-auto flex sm:transform justify-center items-center gap-1 sm:rounded-full border border-gray-950/10 bg-white sm:border-gray-950 sm:bg-gray-950/90 sm:py-0.5 sm:pr-2 sm:pb-1 sm:pl-3 text-center font-mono text-xs/5 font-medium text-gray-950 sm:text-white inset-ring inset-ring-white/10 sm:opacity-0 sm:top-1/2 sm:bottom-auto sm:right-auto sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:hidden sm:transition-opacity sm:group-hover:flex sm:group-hover:opacity-100"
+            className="absolute bottom-2 right-2 z-20 w-7 h-7 rounded-md sm:w-auto sm:h-auto flex sm:transform justify-center items-center gap-1 sm:rounded-full sm:border bg-gray-100 sm:border-gray-950 sm:bg-gray-950/90 sm:py-0.5 sm:pr-2 sm:pb-1 sm:pl-3 text-center font-mono text-xs/5 font-medium text-gray-950 sm:text-white sm:inset-ring sm:inset-ring-white/10 sm:opacity-0 sm:top-1/2 sm:bottom-auto sm:right-auto sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:hidden sm:transition-opacity sm:group-hover:flex sm:group-hover:opacity-100"
             target="_blank"
             rel="noopener noreferrer"
           >
