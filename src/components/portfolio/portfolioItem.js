@@ -6,11 +6,11 @@ import Link from "next/link";
 export default function PortfolioItem({ portfolio }) {
   return (
     <li className="relative group transition-colors sm:even:line-l sm:odd:line-r hover:bg-gray-950/5">
-      <Link
+      {/* <Link
         href={`/work/${portfolio.slug}`}
         aria-label={portfolio.title}
         className="absolute inset-0 z-10"
-      ></Link>
+      ></Link> */}
       <div className="p-2 max-sm:line-y sm:group-nth-[2n+1]:line-y">
         <div className="block relative">
           <a
