@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/layout/SectionWrapper";
 import ProfileImage from "@/components/PorfileImage";
 import PortfolioGrid from "@/components/portfolio/portfolioGrid";
 import ProfileAbout from "@/components/ProfileAbout";
+import ProfileStats from "@/components/ProfileStats";
 import ProfileTitle from "@/components/ProfileTitle";
 import ProjectList from "@/components/project/projectList";
 import TestimonialList from "@/components/testimonial/testimonialList";
@@ -14,6 +15,7 @@ export default function Home() {
         <ProfileImage src="/profile.webp" alt="Priyanshu Chaudhary" />
         <ProfileTitle className="mt-4" title="Priyanshu Chaudhary" subtitle="WordPress Developer" />
         <ProfileAbout className="mt-6 2xl:mt-10" />
+        <ProfileStats className="mt-4" />
         {/* <div className="mt-6 px-2 max-sm:px-4 line-y">
           <div className="group font-mono flex items-center gap-2 text-sm">
             <div className="shrink-0 flex size-7 bg-gray-50 text-gray-600 justify-center items-center rounded-[8px] ring-1 ring-inset ring-gray-950/5">
@@ -40,7 +42,7 @@ export default function Home() {
         <TestimonialList />
       </SectionWrapper>
 
-      <SectionWrapper id="side-projects" title="Side projects">
+      <SectionWrapper id="side-projects" title="Products" description="Below are some products I've built">
         <ProjectList className="mt-6 2xl:mt-10" />
       </SectionWrapper>
     </main>
