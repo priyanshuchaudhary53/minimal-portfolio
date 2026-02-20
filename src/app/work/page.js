@@ -10,7 +10,7 @@ const page = async () => {
   return (
     <main className="py-10 2xl:py-16">
       <div className="px-2 max-sm:px-4 line-y">
-        <h1 className="text-gray-950 text-2xl font-semibold tracking-tight">
+        <h1 className="text-gray-950 text-3xl font-semibold tracking-tight">
           Work
         </h1>
       </div>

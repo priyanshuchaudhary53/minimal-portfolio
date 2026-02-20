@@ -31,7 +31,7 @@ export default function ClientList({ className }) {
               <HoverCardContent
                 side="bottom"
                 sideOffset={12}
-                className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
+                className="p-0 border-0 text-white ring-1 ring-inset ring-white/10 bg-black shadow-none w-auto text-sm px-2 py-1"
               >
                 {client.name}
               </HoverCardContent>
