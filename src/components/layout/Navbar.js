@@ -1,5 +1,6 @@
 "use client";
 
+import * as Icons from "@heroicons/react/24/outline";
 import {
   HoverCard,
   HoverCardContent,
@@ -61,26 +62,29 @@ export default function Navbar() {
       <nav
         className={`z-10 p-1 flex gap-1 bg-white rounded-[12px] ring-1 ring-gray-950/5 transition-all duration-200 ${isVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-3 pointer-events-none"}`}
       >
-        {navbarData.map((item) => (
-          <HoverCard key={item.id} openDelay={10} closeDelay={10}>
-            <HoverCardTrigger
-              className="inline-flex h-9 w-9 text-gray-600 items-center justify-center rounded-md transition-colors hover:bg-gray-950/5"
-              asChild
-            >
-              <Link href={item.url}>
-                <span className="sr-only">{item.title}</span>
-                {item.svg}
-              </Link>
-            </HoverCardTrigger>
-            <HoverCardContent
-              side="top"
-              sideOffset={12}
-              className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
-            >
-              {item.title}
-            </HoverCardContent>
-          </HoverCard>
-        ))}
+        {navbarData.map((item) => {
+          const Icon = Icons[item.icon] || Icons.QuestionMarkCircleIcon;
+          return (
+            <HoverCard key={item.id} openDelay={10} closeDelay={10}>
+              <HoverCardTrigger
+                className="inline-flex h-9 w-9 text-gray-600 items-center justify-center rounded-md transition-colors hover:bg-gray-950/5"
+                asChild
+              >
+                <Link href={item.url}>
+                  <span className="sr-only">{item.title}</span>
+                  <Icon className="size-5" aria-hidden="true" />
+                </Link>
+              </HoverCardTrigger>
+              <HoverCardContent
+                side="top"
+                sideOffset={12}
+                className="p-0 border-0 text-gray-950 ring-1 ring-gray-950/5 bg-white shadow-none w-auto text-sm px-2 py-1"
+              >
+                {item.title}
+              </HoverCardContent>
+            </HoverCard>
+          );
+        })}
       </nav>
     </div>
   );
