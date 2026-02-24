@@ -1,3 +1,4 @@
+import testimonialData from "@/data/testimonialData";
 import ClientList from "@/components/client/clientList";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import ProfileImage from "@/components/PorfileImage";
@@ -6,14 +7,20 @@ import ProfileAbout from "@/components/ProfileAbout";
 import ProfileStats from "@/components/ProfileStats";
 import ProfileTitle from "@/components/ProfileTitle";
 import ProjectList from "@/components/project/projectList";
-import TestimonialList from "@/components/testimonial/testimonialList";
+import Testimonial from "@/components/testimonial/testimonial";
 
 export default function Home() {
+  const testimonial = testimonialData.volkan;
+
   return (
     <main className="py-18 grid gap-18 2xl:gap-24 2xl:py-24">
       <section id="intro" className="scroll-mt-4">
         <ProfileImage src="/profile.webp" alt="Priyanshu Chaudhary" />
-        <ProfileTitle className="mt-4" title="Priyanshu Chaudhary" subtitle="WordPress Developer" />
+        <ProfileTitle
+          className="mt-4"
+          title="Priyanshu Chaudhary"
+          subtitle="WordPress Developer"
+        />
         <ProfileAbout className="mt-6 2xl:mt-10" />
         <ProfileStats className="mt-4" />
         {/* <div className="mt-6 px-2 max-sm:px-4 line-y">
@@ -30,19 +37,30 @@ export default function Home() {
         </div> */}
       </section>
 
-      <SectionWrapper title="CLients" description="Trusted by businesses & agencies">
-          <ClientList className="mt-6 2xl:mt-10" />
+      <SectionWrapper
+        title="CLients"
+        description="Trusted by businesses & agencies"
+      >
+        <ClientList className="mt-6 2xl:mt-10" />
       </SectionWrapper>
 
-      <SectionWrapper id="work" title="Work" description="A small selection of my work">
+      <SectionWrapper
+        id="work"
+        title="Work"
+        description="A small selection of my work"
+      >
         <PortfolioGrid className="mt-6 2xl:mt-10" limit={4} />
       </SectionWrapper>
 
       <SectionWrapper id="testimonial" title="Testimonial" showTitle={false}>
-        <TestimonialList />
+        <Testimonial testimonial={testimonial} />
       </SectionWrapper>
 
-      <SectionWrapper id="side-projects" title="Products" description="Below are some products I've built">
+      <SectionWrapper
+        id="side-projects"
+        title="Products"
+        description="Below are some products I've built"
+      >
         <ProjectList className="mt-6 2xl:mt-10" />
       </SectionWrapper>
     </main>
