@@ -46,7 +46,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="pb-2 xl:pb-8 w-full fixed left-0 right-0 bottom-[env(safe-area-inset-bottom,0)] flex justify-center z-50 max-w-screen translate-z-0 will-change-transform">
+    <div
+      className={`pb-2 xl:pb-8 w-full fixed left-0 right-0 bottom-[env(safe-area-inset-bottom,0)] flex justify-center z-50 max-w-screen translate-z-0 will-change-transform ${isVisible ? "" : "pointer-events-none"}`}
+    >
       {isVisible && (
         <div className="hidden absolute inset-0 overflow-hidden xl:block">
           <div className="opacity-100 absolute inset-0 z-1 mask-[linear-gradient(rgba(0,0,0,0)_0%,rgb(0,0,0)_12.5%,rgb(0,0,0)_25%,rgba(0,0,0,0)_37.5%)] pointer-events-none backdrop-blur-[0.25px] will-change-auto"></div>
@@ -60,7 +62,7 @@ export default function Navbar() {
         </div>
       )}
       <nav
-        className={`z-10 p-1 flex gap-1 bg-white rounded-[12px] ring-1 ring-gray-950/5 transition-all duration-200 ${isVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-3 pointer-events-none"}`}
+        className={`z-10 p-1 flex gap-1 bg-white rounded-[12px] ring-1 ring-gray-950/5 transition-all duration-200 ${isVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-3"}`}
       >
         {navbarData.map((item) => {
           const Icon = Icons[item.icon] || Icons.QuestionMarkCircleIcon;
