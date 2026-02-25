@@ -3,7 +3,7 @@
 import portfolioData from "@/data/portfolioData";
 import PortfolioItem from "./portfolioItem";
 import NavigationButton from "../ui/NavigationButton";
-import ArrowRightIcon from "../icon/ArrowRightIcon";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function PortfolioGrid({ className, limit = null }) {
   const normalizedLimit = Math.max(0, Number(limit)) || null;
@@ -28,7 +28,7 @@ export default function PortfolioGrid({ className, limit = null }) {
         <div className="px-2 max-sm:px-4 flex justify-center mt-6 line-y 2xl:mt-10">
           <NavigationButton href="/work" withIcon={true}>
             More works
-            <ArrowRightIcon className="size-4" stroke="2" aria-hidden="true" />
+            <ArrowRightIcon className="size-4 stroke-2" aria-hidden="true" />
           </NavigationButton>
         </div>
       )}

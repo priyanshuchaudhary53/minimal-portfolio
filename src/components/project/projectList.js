@@ -1,6 +1,6 @@
 import Image from "next/image";
 import projectData from "@/data/projectData";
-import ArrowUpRightIcon from "../icon/ArrowUpRightIcon";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function ProjectList({className}) {
     return (

@@ -1,4 +1,4 @@
-import MapPinIcon from "../icon/MapPinIcon";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 export default function Footer({ className }) {
   return (

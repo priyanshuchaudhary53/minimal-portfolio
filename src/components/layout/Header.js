@@ -1,4 +1,4 @@
-import ClockIcon from "../icon/ClockIcon";
+import { ClockIcon } from "@heroicons/react/24/outline";
 import CurrentTemperature from "../ui/CurrentTemperature";
 import DayNight from "../ui/DayNight";
 import IndiaTime from "../ui/IndiaTime";

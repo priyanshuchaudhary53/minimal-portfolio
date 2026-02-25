@@ -1,7 +1,7 @@
 import Image from "next/image";
-import ArrowUpRightIcon2 from "../icon/ArrowUpRightIcon2";
-import ArrowUpRightIcon from "../icon/ArrowUpRightIcon";
+import { ArrowUpRightIcon as ArrowUpRightIcon2 } from "../icon/ArrowUpRightIcon";
 import Link from "next/link";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function PortfolioItem({ portfolio }) {
   return (
@@ -23,13 +23,12 @@ export default function PortfolioItem({ portfolio }) {
             <span className="hidden sm:block">
               {portfolio.url.replace(/^https?:\/\/([^\/]+).*$/, "$1")}
             </span>{" "}
-           <ArrowUpRightIcon2
+            <ArrowUpRightIcon2
               className="hidden sm:block shrink-0 size-3.5"
               aria-hidden="true"
             />
             <ArrowUpRightIcon
-              className="sm:hidden shrink-0 size-4"
-              stroke="2"
+              className="sm:hidden shrink-0 size-4 stroke-2"
               aria-hidden="true"
             />
           </a>

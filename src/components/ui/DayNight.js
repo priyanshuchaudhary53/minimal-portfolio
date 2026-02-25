@@ -1,5 +1,4 @@
-import MoonIcon from "../icon/MoonIcon";
-import SunIcon from "../icon/SunIcon";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 export default function DayNight({ className }) {
   const now = new Date();
