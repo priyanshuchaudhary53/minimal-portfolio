@@ -57,7 +57,7 @@ export default function Home() {
       </SectionWrapper>
 
       <SectionWrapper
-        id="side-projects"
+        id="products"
         title="Products"
         description="Below are some products I've built"
       >
