@@ -3,15 +3,9 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/portfolio/:slug",
+        source: "/portfolio/:slug((?!.*\\.[a-zA-Z]+$).*)",
         destination: "/work",
         permanent: true,
-        missing: [
-          {
-            type: "header",
-            key: "x-nextjs-data",
-          },
-        ],
       },
     ];
   },
