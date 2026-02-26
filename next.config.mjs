@@ -6,6 +6,12 @@ const nextConfig = {
         source: "/portfolio/:slug",
         destination: "/work",
         permanent: true,
+        missing: [
+          {
+            type: "header",
+            key: "x-nextjs-data",
+          },
+        ],
       },
     ];
   },
