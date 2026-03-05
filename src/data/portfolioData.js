@@ -937,6 +937,73 @@ $query->set('meta_query', $meta_query);`,
     tags: ["Elementor", "Hello Elementor theme"],
     slug: "moraz-fr",
   },
+  {
+    id: 8,
+    public: true,
+    title: "AnyOnlineTool",
+    description: "Laravel website for online tools",
+    image: "/portfolio/aot-home.webp",
+    url: "https://anyonlinetool.com/",
+    tags: ["Laravel", "PHP"],
+    slug: "anyonlinetool",
+    sections: [
+      {
+        type: "content",
+        data: {
+          title: "About the project",
+          content: [
+            {
+              type: "block",
+              items: [
+                {
+                  tag: "p",
+                  content:
+                    "Built AnyOnlineTool.com, a Laravel-based marketplace that offers a collection of online tools and calculators. The platform was designed so tools can be easily added and integrated on other websites using simple code snippets.",
+                  highlights: ["AnyOnlineTool.com"],
+                },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        type: "content",
+        data: {
+          title: "The solution",
+          content: [
+            {
+              type: "block",
+              items: [
+                {
+                  tag: "p",
+                  content:
+                    "Developed the platform in Laravel with a flexible structure that allows new tools to be added quickly. Website owners can embed tools on their sites using JavaScript snippets and control branding and advertisements according to their needs.",
+                },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        type: "content",
+        data: {
+          title: "Result",
+          content: [
+            {
+              type: "block",
+              items: [
+                {
+                  tag: "p",
+                  content:
+                    "The platform provides users with access to many useful tools in one place. Website owners can integrate these tools on their own sites with minimal effort. The system also includes IP logging for transparency and security, along with features like tool discovery, customizable options, and premium upgrades to improve the overall user experience.",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ],
+  },
 ];
 
 export default portfolioData;

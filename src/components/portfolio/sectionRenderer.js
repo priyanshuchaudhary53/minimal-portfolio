@@ -1,4 +1,5 @@
 import PortfolioChallenge from "./portfolioChallenge";
+import PortfolioContent from "./portfolioContent";
 import PortfolioDevelopment from "./portfolioDevelopment";
 import PortfolioPerformance from "./portfolioPerformance";
 import PortfolioResearch from "./portfolioResearch";
@@ -22,6 +23,9 @@ export default function SectionRenderer({ section }) {
 
     case "seeding":
       return <PortfolioSeeding {...section.data} />
+
+    case "content":
+      return <PortfolioContent {...section.data} />
 
     default:
       return null;
