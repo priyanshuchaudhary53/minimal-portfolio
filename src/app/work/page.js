@@ -13,7 +13,7 @@ const page = async () => {
     const testimonial = testimonialData.dmitry;
 
   return (
-    <main className="py-10 grid grid-cols-1 gap-10 2xl:gap-16 2xl:py-16">
+    <main className="py-10 grid grid-cols-1 gap-10 2xl:gap-18 2xl:py-16">
       <section>
         <div className="px-2 max-sm:px-4 line-y">
           <h1 className="text-gray-950 text-3xl font-semibold tracking-tight">

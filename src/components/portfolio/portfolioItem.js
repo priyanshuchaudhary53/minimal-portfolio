@@ -6,11 +6,13 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 export default function PortfolioItem({ portfolio }) {
   return (
     <li className="relative group transition-colors sm:even:line-l sm:odd:line-r hover:bg-gray-950/5">
-      {/* <Link
-        href={`/work/${portfolio.slug}`}
-        aria-label={portfolio.title}
-        className="absolute inset-0 z-10"
-      ></Link> */}
+      {(portfolio.public || process.env.NODE_ENV === "development") && (
+        <Link
+          href={`/work/${portfolio.slug}`}
+          aria-label={portfolio.title}
+          className="absolute inset-0 z-10"
+        />
+      )}
       <div className="p-2 max-sm:line-y sm:group-nth-[2n+1]:line-y">
         <div className="block relative">
           <a
