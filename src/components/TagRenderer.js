@@ -55,7 +55,7 @@ export default function TagRenderer({
 
     case "img":
       const image = (
-        <Image src={content.path} className="not-prose mt-6 2xl:mt-10" width={1100} height={220} alt={content.alt} />
+        <Image src={content.path} className="not-prose mt-6 2xl:mt-10" width={content.width} height={content.height} alt={content.alt} />
       );
 
       return content.url ? (
