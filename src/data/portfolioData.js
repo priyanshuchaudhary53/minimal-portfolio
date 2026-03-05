@@ -228,20 +228,25 @@ const portfolioData = [
                       content: [
                         {
                           tag: "li",
-                          content: "Built specifically for WP Job Manager",
-                        },
-                        {
-                          tag: "ul",
                           content: [
                             {
-                              tag: "li",
-                              content:
-                                "Fully supports core features: job listings, submissions, dashboards, filters, etc.",
+                              tag: "p",
+                              content: "Built specifically for WP Job Manager",
                             },
                             {
-                              tag: "li",
-                              content:
-                                "Compatible with WPJM core add-on plugins (Resumes, Paid listings, etc).",
+                              tag: "ul",
+                              content: [
+                                {
+                                  tag: "li",
+                                  content:
+                                    "Fully supports core features: job listings, submissions, dashboards, filters, etc.",
+                                },
+                                {
+                                  tag: "li",
+                                  content:
+                                    "Compatible with WPJM core add-on plugins (Resumes, Paid listings, etc).",
+                                },
+                              ],
                             },
                           ],
                         },
@@ -430,9 +435,7 @@ $query->set('meta_query', $meta_query);`,
                       tag: "p",
                       content:
                         "Job posting is gated behind a prepaid package system using the WC Paid Listings add-on for WP Job Manager.",
-                        highlights: [
-                          "WC Paid Listings"
-                        ],
+                      highlights: ["WC Paid Listings"],
                     },
                     {
                       tag: "p",

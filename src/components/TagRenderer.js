@@ -16,20 +16,13 @@ export default function TagRenderer({
       return <p>{injectHtml(content, highlights, links, codes)}</p>;
     case "ul":
       return (
-        <div className="prose">
-          <ul>
-            {content?.map((item, index) => (
-              <TagRenderer
-                key={index}
-                tag={item.tag}
-                content={item.content}
-                highlights={item.highlights}
-                links={item.links}
-                codes={item.codes}
-              />
-            ))}
-          </ul>
-        </div>
+        // <div className="prose">
+        <ul>
+          {content?.map((item, index) => (
+            <TagRenderer key={index} {...item} />
+          ))}
+        </ul>
+        // </div>
       );
 
     case "li":
@@ -37,14 +30,7 @@ export default function TagRenderer({
         <li>
           {Array.isArray(content)
             ? content.map((item, index) => (
-                <TagRenderer
-                  key={index}
-                  tag={item.tag}
-                  content={item.content}
-                  highlights={item.highlights}
-                  links={item.links}
-                  codes={item.codes}
-                />
+                <TagRenderer key={index} {...item} />
               ))
             : injectHtml(content, highlights, links, codes)}
         </li>
@@ -55,7 +41,13 @@ export default function TagRenderer({
 
     case "img":
       const image = (
-        <Image src={content.path} className="not-prose mt-6 2xl:mt-10" width={content.width} height={content.height} alt={content.alt} />
+        <Image
+          src={content.path}
+          className="not-prose mt-6 2xl:mt-10"
+          width={content.width}
+          height={content.height}
+          alt={content.alt}
+        />
       );
 
       return content.url ? (
