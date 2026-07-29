@@ -1,6 +1,630 @@
 const portfolioData = [
   {
-    id: 1,
+    id: "retroplus",
+    public: true,
+    title: "RetroPlus",
+    description: "Danish retro gaming e-commerce website",
+    image: "/portfolio/rp-home.webp",
+    url: "https://staging.retroplus.dk/",
+    tags: ["GeneratePress", "WooCommerce"],
+    slug: "retroplus",
+    meta: {
+      title: "RetroPlus - Custom WooCommerce Retro Gaming Store",
+      description:
+        "A custom-built WooCommerce store for RetroPlus, a Danish retro gaming shop. Features include clean product URLs, instant search, wishlists, product filters, a fully custom checkout, cart rewards, and 7 custom Gutenberg blocks.",
+    },
+    project_info: [
+      {
+        label: "Company name",
+        value: "RetroPlus",
+      },
+      {
+        label: "Role",
+        value: "Full-Stack WordPress Engineer",
+      },
+    ],
+    sections: [
+      {
+        type: "challenges",
+        data: {
+          title: "The challenge",
+          description:
+            "RetroPlus needed more than a standard WordPress shop. The store required custom-built features to deliver a fast, modern shopping experience while giving the owner full control over every part of the site.",
+          items: [
+            {
+              key: "seo_friendly_urls",
+              title: "Clean product URLs",
+              icon: "LinkIcon",
+              description:
+                "WooCommerce generates messy URLs by default. The store needed clean, readable links across 40+ gaming platforms without breaking existing URLs or search rankings.",
+            },
+            {
+              key: "live_search",
+              title: "Instant product search",
+              icon: "MagnifyingGlassIcon",
+              description:
+                "Customers needed a fast search bar that shows results as they type, with product images and prices, without slowing down the rest of the site.",
+            },
+            {
+              key: "wishlist_system",
+              title: "Wishlist for everyone",
+              icon: "HeartIcon",
+              description:
+                "A save-for-later feature that works whether the customer has an account or not, and keeps their saved items when they sign up.",
+            },
+            {
+              key: "custom_checkout",
+              title: "Danish checkout flow",
+              icon: "CreditCardIcon",
+              description:
+                "Denmark has specific checkout needs like business vs. private customers, public institution billing with EAN numbers, and pickup point (pakkeshop) selection for shipping.",
+            },
+            {
+              key: "product_filters",
+              title: "Product filters",
+              icon: "FunnelIcon",
+              description:
+                "Category pages with hundreds of products needed filters so customers can narrow down by things like model, controller type, or price range, all without reloading the page.",
+            },
+            {
+              key: "cart_rewards",
+              title: "Cart rewards",
+              icon: "GiftIcon",
+              description:
+                "A progress bar on the cart page that shows customers how close they are to unlocking free shipping or a discount, and applies the discount automatically.",
+            },
+            {
+              key: "gutenberg_blocks",
+              title: "Custom editor blocks",
+              icon: "CubeIcon",
+              description:
+                "7 drag-and-drop blocks for the WordPress editor so the store owner can manage product carousels, menus, banners, FAQs, and newsletter signups without touching code.",
+            },
+            {
+              key: "performance",
+              title: "Fast page loads",
+              icon: "BoltIcon",
+              description:
+                "Despite all the custom features, the site needed to stay fast. CSS and JavaScript only load on pages where they are actually needed.",
+            },
+            {
+              key: "gift_cards",
+              title: "Gift card support",
+              icon: "TicketIcon",
+              description:
+                "The store sells digital gift cards that needed a custom page design and special handling so they are excluded from shipping, cart rewards, and discount coupons.",
+            },
+          ],
+        },
+      },
+      {
+        type: "development",
+        data: {
+          title: "Technical implementation",
+          description: {
+            content: [
+              "RetroPlus is built on WordPress with WooCommerce, using GeneratePress as the base theme. The code is organized into three separate layers: a core plugin for things that should never be accidentally turned off (like URLs and order numbers), a features plugin for everything else (search, wishlist, filters, blocks), and a child theme that only handles the visual design.",
+              "Here is what I built on top of that foundation.",
+            ],
+            highlights: ["GeneratePress"],
+          },
+          subSections: [
+            {
+              title: "Clean product URLs",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "By default, WooCommerce gives products URLs like /product/god-of-war/ and categories look like /product-category/playstation/playstation-4/spil/. These are ugly and not great for search engines. I replaced them with clean, logical URLs.",
+                      codes: [
+                        "/product/god-of-war/",
+                        "/product-category/playstation/playstation-4/spil/",
+                      ],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "Now a product like God of War shows up at /playstation/playstation-4/spil/god-of-war/ and categories at /playstation/playstation-4/spil/. The URL reads like a trail that makes sense to both people and search engines.",
+                      codes: [
+                        "/playstation/playstation-4/spil/god-of-war/",
+                        "/playstation/playstation-4/spil/",
+                      ],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "This was one of the trickiest parts of the project. The store has 40+ gaming platforms (PlayStation 1-5, PSP, PS Vita, Nintendo Game Boy through Switch, Xbox, Sega, and more), each with sub-categories like Konsoller (consoles), Spil (games), and Tilbehør (accessories). WordPress normally creates messy URLs when multiple categories share the same name, so I built a mapping system that keeps everything clean. Old URLs automatically redirect to the new ones so no links break and search rankings are preserved.",
+                      highlights: [
+                        "Konsoller",
+                        "Spil",
+                        "Tilbehør",
+                      ],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        'There is also an edge case where two products could end up with the same URL. For example, a "slim" console exists for both PlayStation 3 and PlayStation 4. My system handles this gracefully. If someone tries to create a product that would cause a URL clash, it blocks the action and shows a clear error message.',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Sequential order numbers",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "WooCommerce uses internal database IDs as order numbers, so customers end up seeing random-looking numbers like #48723. I built a system that gives each order a simple, counting number: #1, #2, #3, and so on.",
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "Even if two orders come in at the exact same moment, the system makes sure each one still gets its own unique number. It works with WooCommerce's newer storage system (HPOS) and handles subscriptions correctly too.",
+                      highlights: ["HPOS"],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "These order numbers show up everywhere: in emails, on the customer's account page, in the admin panel, and on the order tracking page. Staff can also search by these numbers.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Instant product search",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "The store needed a search bar that shows results as you type. The existing plugin (FiboSearch) was too heavy to load on every page just for a header search bar, so I built a lightweight one from scratch.",
+                      highlights: ["FiboSearch"],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "When customers start typing, a dropdown appears instantly with matching products, their images, prices, and whether they are in stock. They can also filter by category to narrow things down to a specific platform.",
+                    },
+                    {
+                      tag: "ul",
+                      content: [
+                        {
+                          tag: "li",
+                          content:
+                            "Results show up fast because they are cached on the server",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "If someone types quickly, only the final search actually runs to save bandwidth",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Works with keyboard navigation (arrow keys, Enter, Escape)",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Accessible to screen readers",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Rate limited to 30 searches per minute per visitor to prevent abuse",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            'Clicking "See all" opens a full results page that matches the dropdown',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Wishlist system",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "Customers can click a heart icon on any product to save it for later. If they are not logged in, the wishlist is stored in a secure cookie. If they have an account, it is saved there instead. When a guest signs up or logs in, their saved items automatically merge with their account so nothing is lost.",
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "There is a dedicated wishlist page showing all saved products with images, prices, and stock info. It also suggests related products based on what the customer has saved. The page is part of the My Account section as well.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Product filters",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "Some categories have hundreds of products, so customers need a way to narrow things down. I built filters that let them sort by attributes like model, controller type, or price range. The products update on the page without a full reload.",
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "The filters change depending on which category the customer is browsing. The store owner can decide which attributes show up as filters for each category through the WordPress admin. There is also a price range slider that automatically picks up the lowest and highest prices in each category.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Custom editor blocks",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "I built 7 custom blocks for the WordPress editor so the store owner can manage key parts of the site by dragging and dropping, without needing a developer:",
+                    },
+                    {
+                      tag: "ul",
+                      content: [
+                        {
+                          tag: "li",
+                          content:
+                            "Featured Products: a swipeable product carousel. The owner picks which products or categories to show, and the block displays them with images, prices, and add-to-cart buttons.",
+                          highlights: ["Featured Products"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Desktop Menu: a large dropdown menu designed for the store's category structure.",
+                          highlights: ["Desktop Menu"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Mobile Menu: a separate touch-friendly menu for phones and tablets.",
+                          highlights: ["Mobile Menu"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Promo Banner: a banner for sales and promotions.",
+                          highlights: ["Promo Banner"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "FAQ Block: expandable question-and-answer sections.",
+                          highlights: ["FAQ Block"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Klaviyo Newsletter: a signup form connected to the store's email marketing platform.",
+                          highlights: ["Klaviyo Newsletter"],
+                          links: [
+                            {
+                              label: "Klaviyo",
+                              url: "https://www.klaviyo.com",
+                              isExternalLink: true,
+                            },
+                          ],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Breadcrumb: navigation breadcrumbs that show where you are on the site.",
+                          highlights: ["Breadcrumb"],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Custom checkout",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "The default WooCommerce checkout does not handle Danish-specific needs. I rebuilt the entire checkout flow from scratch.",
+                    },
+                    {
+                      tag: "ul",
+                      content: [
+                        {
+                          tag: "li",
+                          content:
+                            "Three customer types: private customers, businesses, and public institutions, each with their own set of required fields",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "EAN number support for Danish public institutions that use EAN for billing",
+                          highlights: ["EAN"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Pickup point selection: customers enter their postal code and choose a nearby GLS pakkeshop as their delivery address, powered by the Shipmondo API",
+                          highlights: ["GLS"],
+                          links: [
+                            {
+                              label: "Shipmondo",
+                              url: "https://shipmondo.com",
+                              isExternalLink: true,
+                            },
+                          ],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Modal popups for adding a different delivery address (private or business)",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Floating labels that move above the input field when you start typing",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Fields arranged in the order Danish customers expect (email first, then name, address, postal code, city, phone)",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Returning customers see their previous shipping method and customer type already filled in",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Cart rewards",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "The cart page has a progress bar with two milestones: free shipping and a percentage discount. As customers add products, the bar fills up and tells them exactly how much more they need to spend to unlock the next reward.",
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "When they reach the discount threshold, a coupon is automatically applied to the order. The store owner can change the discount percentage and minimum spend amount from a settings page.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Product badges",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        'The store owner can add small labels to any product, like "New", "Limited Edition", or "Best Seller". Each badge gets its own colors and shows up on product cards throughout the site.',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Category icons",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "Each product category can have its own icon. The store owner pastes SVG icon code in the admin, and the icons appear in the search dropdown, navigation menus, and category pages. The icons are cleaned up automatically to prevent any security issues.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Product editor extensions",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "I added several custom tabs to the WooCommerce product editor:",
+                    },
+                    {
+                      tag: "ul",
+                      content: [
+                        {
+                          tag: "li",
+                          content:
+                            "Video tab: add a YouTube or Vimeo link that shows up on the product page",
+                          highlights: ["Video tab"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Specifications tab: a drag-and-drop list for adding specs like Storage: 500GB",
+                          highlights: ["Specifications tab"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Additional Information tab: a rich text field for extra product details",
+                          highlights: ["Additional Information tab"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Product Condition: mark a product as Nyt (New) or Brugt (Used) in Danish",
+                          highlights: ["Product Condition"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Gift Card FAQ: an FAQ section specifically for gift card products",
+                          highlights: ["Gift Card FAQ"],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Gift card support",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "The store uses the PW Gift Cards plugin for selling gift cards, but the default look did not fit the site's design. I built a custom gift card page and added popups for entering gift card codes on the cart and checkout pages.",
+                      highlights: ["PW Gift Cards"],
+                    },
+                    {
+                      tag: "p",
+                      content:
+                        "Since gift cards are digital, they are excluded from shipping calculations, cart rewards, and discount coupons.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Registration flow",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "WooCommerce's default registration only asks for an email address. I added first name and last name fields, a newsletter opt-in checkbox that connects to Klaviyo (the store's email marketing tool), and proper error messages when something goes wrong.",
+                      links: [
+                        {
+                          label: "Klaviyo",
+                          url: "https://www.klaviyo.com",
+                          isExternalLink: true,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Blog layout",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "I designed a custom blog page with a large featured area for the latest post, a highlighted posts section, a card-based grid for older posts, and pagination to browse through them.",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Theme and visual design",
+              content: [
+                {
+                  type: "block",
+                  items: [
+                    {
+                      tag: "p",
+                      content:
+                        "The entire look of the site is built as a child theme on top of GeneratePress:",
+                      highlights: ["GeneratePress"],
+                    },
+                    {
+                      tag: "ul",
+                      content: [
+                        {
+                          tag: "li",
+                          content:
+                            "Custom page templates for products, cart, checkout, and account pages",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Category pages that look different depending on whether you are on a top-level platform or a sub-category",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Cart page with +/- quantity buttons, shipping estimates, VAT display, and a Shop further button",
+                          highlights: ["Shop further"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Responsive design that works on phones, tablets, and desktops",
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "Custom heading font (Muro Slant)",
+                          highlights: ["Muro Slant"],
+                        },
+                        {
+                          tag: "li",
+                          content:
+                            "CSS and JavaScript files only load on pages where they are actually needed, keeping things fast",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "zdalnapraca",
     public: true,
     title: "ZdalnaPraca",
     description: "Job board for remote work",
@@ -868,7 +1492,7 @@ $query->set('meta_query', $meta_query);`,
     ],
   },
   {
-    id: 2,
+    id: "nawypoczynek",
     title: "NaWypoczynek",
     description: "Advertisement platform for rentals",
     image: "/portfolio/nw-home.webp",
@@ -893,7 +1517,7 @@ $query->set('meta_query', $meta_query);`,
     ],
   },
   {
-    id: 3,
+    id: "eternitech",
     title: "Eternitech",
     description: "Marketing website for IT company",
     image: "/portfolio/et-home.webp",
@@ -902,7 +1526,7 @@ $query->set('meta_query', $meta_query);`,
     slug: "eternitech",
   },
   {
-    id: 4,
+    id: "moraz",
     title: "Moraz",
     description: "E-commerce website for skincare products",
     image: "/portfolio/moraz-home.webp",
@@ -911,7 +1535,7 @@ $query->set('meta_query', $meta_query);`,
     slug: "moraz-usa",
   },
   {
-    id: 5,
+    id: "playwithstakes",
     title: "PlayWithStakes",
     description: "Affiliate website for online casinos",
     image: "/portfolio/pws-home.webp",
@@ -920,7 +1544,7 @@ $query->set('meta_query', $meta_query);`,
     slug: "playwithstakes",
   },
   {
-    id: 6,
+    id: "weanim8",
     title: "WeAnim8",
     description: "Marketing website for animation studio",
     image: "/portfolio/weanim8-home.webp",
@@ -929,7 +1553,7 @@ $query->set('meta_query', $meta_query);`,
     slug: "weanim8",
   },
   {
-    id: 7,
+    id: "moraz_fr",
     title: "Moraz FR",
     description: "Landing page for Moraz France",
     image: "/portfolio/moraz-fr-home.webp",
@@ -938,7 +1562,7 @@ $query->set('meta_query', $meta_query);`,
     slug: "moraz-fr",
   },
   {
-    id: 8,
+    id: "anyonlinetool",
     public: true,
     title: "AnyOnlineTool",
     description: "Laravel website for online tools",
