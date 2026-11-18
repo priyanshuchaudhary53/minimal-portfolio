@@ -79,7 +79,7 @@ export default function Home() {
         <ProfileTitle
           className="mt-4"
           title="Priyanshu Chaudhary"
-          subtitle="WordPress Developer"
+          subtitle="GeneratePress & WordPress Developer"
         />
         <ProfileAbout className="mt-6 2xl:mt-10" />
         <ProfileStats className="mt-4" />
