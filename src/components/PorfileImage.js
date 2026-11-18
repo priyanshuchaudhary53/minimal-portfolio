@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProfileImage({ src, alt, width="72", height="72", className }) {
+export default function ProfileImage({ src, alt, width="72", height="72", priority = false, className }) {
   return (
     <div className={`${className} px-2 max-sm:px-4 line-y`}>
       <Image
@@ -8,6 +8,7 @@ export default function ProfileImage({ src, alt, width="72", height="72", classN
         alt={alt}
         width={width}
         height={height}
+        priority={priority}
         className="rounded-2xl"
       />
     </div>

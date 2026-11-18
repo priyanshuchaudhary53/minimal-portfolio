@@ -4,6 +4,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import {
+  SITE_URL,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  baseOpenGraph,
+  baseTwitter,
+} from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,8 +28,29 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Priyanshu Chaudhary – WordPress Developer",
-  description: "Portfolio of Priyanshu Chaudhary, a WordPress developer specializing in custom themes and plugins. Based in Lucknow, India, showcasing work and side projects.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    ...baseOpenGraph,
+    url: "/",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    ...baseTwitter,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {

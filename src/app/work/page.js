@@ -3,10 +3,28 @@ import PortfolioItem from "@/components/portfolio/portfolioItem";
 import Testimonial from "@/components/testimonial/testimonial";
 import testimonialData from "@/data/testimonialData";
 import portfolioData from "@/data/portfolioData";
+import { baseOpenGraph, baseTwitter } from "@/lib/site";
+
+const title = "Work – Priyanshu Chaudhary";
+const description = "A collection of my recent work in WordPress development.";
 
 export const metadata = {
-  title: "Work – Priyanshu Chaudhary",
-  description: "A collection of my recent work in WordPress development.",
+  title,
+  description,
+  alternates: {
+    canonical: "/work",
+  },
+  openGraph: {
+    ...baseOpenGraph,
+    url: "/work",
+    title,
+    description,
+  },
+  twitter: {
+    ...baseTwitter,
+    title,
+    description,
+  },
 };
 
 const page = async () => {

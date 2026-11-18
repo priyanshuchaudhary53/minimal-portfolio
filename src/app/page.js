@@ -8,14 +8,74 @@ import ProfileStats from "@/components/ProfileStats";
 import ProfileTitle from "@/components/ProfileTitle";
 import ProjectList from "@/components/project/projectList";
 import Testimonial from "@/components/testimonial/testimonial";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME, SITE_TITLE } from "@/lib/site";
+
+export const metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: SITE_NAME,
+      publisher: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE_URL}/#profilepage`,
+      url: `${SITE_URL}/`,
+      name: SITE_TITLE,
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      mainEntity: { "@id": `${SITE_URL}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Priyanshu Chaudhary",
+      url: `${SITE_URL}/`,
+      image: `${SITE_URL}/profile.webp`,
+      jobTitle: "GeneratePress & WordPress Developer",
+      email: "mailto:contact@priyanshuc.dev",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lucknow",
+        addressCountry: "IN",
+      },
+      knowsAbout: [
+        "GeneratePress",
+        "GenerateBlocks",
+        "WordPress",
+        "WordPress performance optimization",
+        "Core Web Vitals",
+        "Page-builder to GeneratePress migration",
+        "White-label WordPress development",
+      ],
+      sameAs: [
+        "https://profiles.wordpress.org/priyanshuchaudhary/",
+        "https://www.upwork.com/freelancers/~01ea1d06fa4f6af5c7",
+        "https://www.linkedin.com/in/priyanshuchaudhary53/",
+        "https://github.com/priyanshuchaudhary53",
+        "https://x.com/priyanshuch53",
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   const testimonial = testimonialData.volkan;
 
   return (
     <main className="py-18 grid gap-18 2xl:gap-24 2xl:py-24">
+      <JsonLd data={structuredData} />
       <section id="intro" className="scroll-mt-4">
-        <ProfileImage src="/profile.webp" alt="Priyanshu Chaudhary" />
+        <ProfileImage src="/profile.webp" alt="Priyanshu Chaudhary" priority />
         <ProfileTitle
           className="mt-4"
           title="Priyanshu Chaudhary"

@@ -8,6 +8,7 @@ import HoverIconLink from "@/components/ui/HoverIconLink";
 import NextPostLink from "@/components/ui/NextPostLink";
 import PreviousPostLink from "@/components/ui/PreviousPostLink";
 import SectionRenderer from "@/components/portfolio/sectionRenderer";
+import { baseOpenGraph, baseTwitter } from "@/lib/site";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -29,6 +30,21 @@ export async function generateMetadata({ params }) {
 
   if (title) metaData.title = title;
   if (description) metaData.description = description;
+
+  const path = `/work/${slug}`;
+
+  metaData.alternates = { canonical: path };
+  metaData.openGraph = {
+    ...baseOpenGraph,
+    url: path,
+    title: metaData.title,
+    description: metaData.description,
+  };
+  metaData.twitter = {
+    ...baseTwitter,
+    title: metaData.title,
+    description: metaData.description,
+  };
 
   return metaData;
 }
