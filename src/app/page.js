@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       <SectionWrapper
-        title="CLients"
+        title="Clients"
         description="Trusted by businesses & agencies"
       >
         <ClientList className="mt-6 2xl:mt-10" />
